@@ -430,6 +430,45 @@
 	}
 
 
+	// overlap-services-carousel (Half Banner, Half Outside Slider)
+	if ($('.overlap-services-carousel').length) {
+		var $overlapCarousel = $('.overlap-services-carousel').owlCarousel({
+			loop: true,
+			margin: 20,
+			nav: false,
+			dots: false,
+			smartSpeed: 700,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				576: {
+					items: 2
+				},
+				768: {
+					items: 3
+				},
+				992: {
+					items: 4
+				},
+				1200: {
+					items: 5
+				}
+			}
+		});
+
+		$('.overlap-carousel-nav .prev-btn').on('click', function() {
+			$overlapCarousel.trigger('prev.owl.carousel');
+		});
+		$('.overlap-carousel-nav .next-btn').on('click', function() {
+			$overlapCarousel.trigger('next.owl.carousel');
+		});
+	}
+
+
 	//Client Testimonial Carousel
 	if ($('.client-testimonial-carousel').length && $('.client-thumbs-carousel').length) {
 
