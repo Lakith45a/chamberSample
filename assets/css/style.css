@@ -4440,6 +4440,104 @@ h4 a{
 }
 
 
+/** Always Sticky Header (e.g. for History page) **/
+.main-header.always-sticky {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+.main-header.always-sticky .header-top,
+.main-header.always-sticky .header-upper {
+  display: none !important;
+}
+
+.main-header.always-sticky .header-lower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-header.always-sticky .sticky-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-header.always-sticky .sticky-header .logo-box {
+  padding: 15px 0px !important;
+}
+
+.main-header.always-sticky .sticky-header .logo-box .logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+.main-header.always-sticky .sticky-header .main-menu .navigation > li.current > a,
+.main-header.always-sticky .sticky-header .main-menu .navigation > li:hover > a {
+  color: #063c83 !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .main-header.always-sticky .sticky-header {
+    display: block !important;
+  }
+  .main-header.always-sticky .sticky-header .main-menu {
+    display: none !important;
+  }
+  .main-header.always-sticky .sticky-header .mobile-nav-toggler {
+    display: block !important;
+    margin-top: 18px !important;
+    padding: 10px !important;
+    cursor: pointer;
+  }
+  .main-header.always-sticky .sticky-header .mobile-nav-toggler .icon-bar {
+    background: #222 !important;
+  }
+}
+
+/** History Page Paragraphs Consistent Styling **/
+.about-style-four #content_block_13 .content-box .text p,
+.about-style-four .history-full-width-text p,
+.about-style-four .text p {
+  font-family: 'Arimo', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
+  color: #666666 !important;
+  font-weight: 400 !important;
+  margin-bottom: 24px;
+}
+
+.about-style-four #content_block_13 .content-box .text p:last-child,
+.about-style-four .history-full-width-text p:last-child,
+.about-style-four .text p:last-child {
+  margin-bottom: 0px;
+}
+
+.about-style-four .history-full-width-text {
+  position: relative;
+  display: block;
+  margin-top: 35px;
+}
+
+
 
 /*** 
 
