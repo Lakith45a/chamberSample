@@ -8,63 +8,11 @@
   direction: ltr; 
 }
 
-.demo-rtl{
-  position: fixed;
-  top: 400px;
-  left: 0;
-  z-index: 9999;
-}
-
-button.rtl{
-  background: #222;
-  display: block;
-  text-indent: inherit;
-  font-size: 12px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: 700;
-  margin: 0px;
-  color: #fff !important;
-}
-
-.demo-ltr{
-  position: fixed;
-  top: 400px;
-  left: auto;
-  right: 0;
-  z-index: 9999;
-}
-
-button.ltr {
-  background: #222;
-  display: block;
-  text-indent: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  margin: 0px;
-  color: #fff !important;
-}
-
-body.ltr .demo-rtl{
-  display: block;
-}
-
-body.ltr .demo-ltr{
-  display: none;
-}
-
-body.rtl .demo-rtl{
-  display: none;
-}
-
-body.rtl .demo-ltr{
-  display: block;
+.page_direction,
+.direction_switch,
+.demo-rtl,
+.demo-ltr {
+  display: none !important;
 }
 
 .banner-section{
