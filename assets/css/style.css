@@ -13993,3 +13993,483 @@ h4 a{
 .demo-ltr {
   display: none !important;
 }
+
+/* ====================================================================
+   Appointment of Surveyors & Assessors Creative Section Styling
+==================================================================== */
+.surveyors-section {
+    position: relative;
+    padding: 90px 0 80px;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+.surveyors-hero-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 50px 45px 40px;
+    box-shadow: 0 15px 45px rgba(13, 34, 56, 0.08);
+    position: relative;
+    border: 1px solid rgba(217, 167, 74, 0.25);
+    background-image: radial-gradient(circle at 100% 0%, rgba(217, 167, 74, 0.06) 0%, transparent 60%);
+}
+
+.surveyors-hero-card .badge-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #102640 0%, #1c3d64 100%);
+    color: #d9a74a;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 7px 20px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px rgba(16, 38, 64, 0.2);
+}
+
+.surveyors-hero-card .badge-tag i {
+    margin-right: 6px;
+}
+
+.surveyors-hero-card h2 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 800;
+    color: #102640;
+    margin-bottom: 12px;
+}
+
+.surveyors-hero-card .gold-divider {
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, #d9a74a, #f3cf7a);
+    margin: 15px auto 25px;
+    border-radius: 2px;
+}
+
+.surveyors-lead-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.surveyors-lead-text .lead-quote {
+    font-size: 20px;
+    line-height: 34px;
+    color: #2b3947;
+    font-weight: 500;
+    font-style: italic;
+    background: #fbfbfd;
+    border-left: 4px solid #d9a74a;
+    border-right: 4px solid #d9a74a;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.surveyor-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 40px 32px 35px;
+    box-shadow: 0 10px 30px rgba(13, 34, 56, 0.06);
+    border: 1px solid #eaedf3;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.surveyor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #d9a74a;
+    transition: all 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.surveyor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(13, 34, 56, 0.12);
+    border-color: rgba(217, 167, 74, 0.4);
+}
+
+.surveyor-card:hover::before {
+    transform: scaleX(1);
+}
+
+.surveyor-card.highlight-card {
+    background: linear-gradient(145deg, #102640 0%, #183354 100%);
+    color: #ffffff;
+    border: 1px solid #23436d;
+}
+
+.surveyor-card.highlight-card .card-number {
+    color: rgba(255, 255, 255, 0.08);
+}
+
+.surveyor-card.highlight-card h3 {
+    color: #ffffff;
+}
+
+.surveyor-card.highlight-card p {
+    color: #c9d8ea;
+}
+
+.surveyor-card.highlight-card .card-list li {
+    color: #e4edf8;
+}
+
+.surveyor-card.highlight-card .card-list li i {
+    color: #d9a74a;
+}
+
+.surveyor-card.highlight-card .icon-circle {
+    background: linear-gradient(135deg, #d9a74a, #f4d385);
+    color: #102640;
+}
+
+.card-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #102640, #1f436d);
+    color: #d9a74a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 8px 20px rgba(16, 38, 64, 0.18);
+    transition: all 0.4s ease;
+}
+
+.surveyor-card:hover .icon-circle {
+    transform: rotateY(180deg);
+}
+
+.card-number {
+    font-size: 38px;
+    font-weight: 900;
+    color: #e6ebf2;
+    line-height: 1;
+    font-family: 'Arimo', sans-serif;
+}
+
+.surveyor-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #102640;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.surveyor-card p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #5d6a78;
+    margin-bottom: 20px;
+}
+
+.card-list {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.surveyor-card.highlight-card .card-list {
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-list li {
+    font-size: 14px;
+    line-height: 26px;
+    color: #384858;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.card-list li i {
+    color: #d9a74a;
+    font-size: 13px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.surveyors-cta-banner {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #102640 0%, #1b385c 100%);
+    border-radius: 16px;
+    padding: 38px 45px;
+    color: #ffffff;
+    box-shadow: 0 15px 35px rgba(16, 38, 64, 0.2);
+    border: 1px solid rgba(217, 167, 74, 0.3);
+}
+
+.surveyors-cta-banner .sub-heading {
+    display: inline-block;
+    color: #d9a74a;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.surveyors-cta-banner .sub-heading i {
+    margin-right: 6px;
+}
+
+.surveyors-cta-banner h4 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.surveyors-cta-banner p {
+    font-size: 15px;
+    color: #c9d8ea;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .surveyors-hero-card h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .surveyors-lead-text .lead-quote {
+        font-size: 17px;
+        line-height: 28px;
+        padding: 15px 20px;
+    }
+    .feature-col {
+        margin-bottom: 30px;
+    }
+    .surveyors-cta-banner {
+        text-align: center;
+        padding: 30px 25px;
+    }
+    .surveyors-cta-banner .theme-btn {
+        margin-top: 20px;
+    }
+}
+
+/* ====================================================================
+   Officer Contact Section Styling
+==================================================================== */
+.officer-contact-section {
+    position: relative;
+    padding: 70px 0 90px;
+    background: #ffffff;
+}
+
+.contact-card-wrapper {
+    background: linear-gradient(135deg, #f7f9fc 0%, #edf2f8 100%);
+    border-radius: 20px;
+    padding: 50px 50px;
+    border: 1px solid #e1e7f0;
+    box-shadow: 0 15px 40px rgba(13, 34, 56, 0.07);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: radial-gradient(circle at right center, rgba(217, 167, 74, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.contact-card-info .sec-title {
+    margin-bottom: 0;
+}
+
+.contact-card-info .sec-title h2 {
+    font-size: 34px;
+    line-height: 44px;
+    color: #102640;
+    margin-bottom: 15px;
+}
+
+.contact-card-info .sec-title p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #5d6a78;
+    margin-bottom: 0;
+}
+
+.officer-profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 35px 30px;
+    box-shadow: 0 15px 35px rgba(16, 38, 64, 0.1);
+    border: 2px solid rgba(217, 167, 74, 0.35);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.officer-profile-card:hover {
+    box-shadow: 0 20px 45px rgba(16, 38, 64, 0.15);
+    border-color: #d9a74a;
+}
+
+.officer-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eaedf3;
+    margin-bottom: 22px;
+}
+
+.officer-header .avatar-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #102640 0%, #1c3d64 100%);
+    color: #d9a74a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 6px 16px rgba(16, 38, 64, 0.2);
+}
+
+.officer-meta h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #102640;
+    margin-bottom: 4px;
+}
+
+.officer-meta .designation {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #d9a74a;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+}
+
+.officer-meta .chamber-tag {
+    display: block;
+    font-size: 13px;
+    color: #7b8895;
+    font-weight: 500;
+}
+
+.officer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.officer-contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #eef2f7;
+    transition: all 0.3s ease;
+}
+
+.officer-contact-list li:hover {
+    background: #ffffff;
+    border-color: rgba(217, 167, 74, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.officer-contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+.officer-contact-list li .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: rgba(217, 167, 74, 0.15);
+    color: #d9a74a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.officer-contact-list li .details span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8392a5;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.officer-contact-list li .details a {
+    font-size: 17px;
+    font-weight: 700;
+    color: #102640;
+    transition: all 0.2s ease;
+}
+
+.officer-contact-list li .details a:hover {
+    color: #d9a74a;
+}
+
+.officer-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.officer-actions .theme-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+    .contact-card-wrapper {
+        padding: 35px 25px;
+    }
+    .contact-card-info {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .officer-profile-card {
+        padding: 25px 20px;
+    }
+    .officer-actions {
+        flex-direction: column;
+    }
+}
