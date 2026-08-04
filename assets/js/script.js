@@ -792,6 +792,74 @@
 
 	
 	
+	// Initialize Company History / Milestones Timeline
+	function initMilestoneTimeline() {
+		var timelineWrapper = document.getElementById('corporateTimeline');
+		if (!timelineWrapper) return;
+
+		var progressBar = document.getElementById('timelineProgressBar');
+		var milestoneItems = timelineWrapper.querySelectorAll('.timeline-milestone-item');
+
+		// IntersectionObserver for animate-on-scroll
+		if ('IntersectionObserver' in window) {
+			var observerOptions = {
+				root: null,
+				rootMargin: '0px 0px -80px 0px',
+				threshold: 0.15
+			};
+
+			var milestoneObserver = new IntersectionObserver(function(entries) {
+				entries.forEach(function(entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						entry.target.classList.add('is-active');
+					}
+				});
+			}, observerOptions);
+
+			milestoneItems.forEach(function(item) {
+				milestoneObserver.observe(item);
+			});
+		} else {
+			milestoneItems.forEach(function(item) {
+				item.classList.add('is-visible', 'is-active');
+			});
+		}
+
+		// Dynamic Scroll Progress Line Calculation
+		function updateTimelineProgress() {
+			var rect = timelineWrapper.getBoundingClientRect();
+			var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+			
+			var startOffset = windowHeight * 0.65;
+			var totalHeight = rect.height;
+			var currentProgress = startOffset - rect.top;
+			
+			var percentage = (currentProgress / totalHeight) * 100;
+			percentage = Math.max(0, Math.min(100, percentage));
+			
+			if (progressBar) {
+				progressBar.style.height = percentage + '%';
+			}
+
+			// Activate markers when reached
+			milestoneItems.forEach(function(item) {
+				var itemRect = item.getBoundingClientRect();
+				if (itemRect.top <= windowHeight * 0.7) {
+					item.classList.add('is-active');
+				}
+			});
+		}
+
+		window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+		window.addEventListener('resize', updateTimelineProgress);
+		updateTimelineProgress();
+	}
+
+	$(document).ready(function() {
+		initMilestoneTimeline();
+	});
+
 	/* ==========================================================================
    When document is loaded, do
    ========================================================================== */
@@ -800,6 +868,7 @@
 		handlePreloader();
 		expertizeRoundCircle ();
 		enableMasonry();
+		initMilestoneTimeline();
 	});
 
 	
