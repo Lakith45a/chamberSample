@@ -4535,10 +4535,34 @@ h4 a{
   margin-bottom: 0px;
 }
 
+.about-style-four #image_block_four .image-box {
+  margin-top: 0px !important;
+}
+
+.about-style-four #image_block_four .image-box .image {
+  clip-path: none !important;
+}
+
+.about-style-four #image_block_four .image-box .image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
 .about-style-four .history-full-width-text {
   position: relative;
   display: block;
-  margin-top: 10px;
+  margin-top: 25px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-style-four #image_block_four .image-box {
+    margin-top: 30px !important;
+    margin-left: 0px !important;
+  }
+  .about-style-four .history-full-width-text {
+    margin-top: 25px !important;
+  }
 }
 
 
