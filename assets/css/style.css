@@ -16208,3 +16208,123 @@ h4 a{
         font-size: 18px;
     }
 }
+
+/* ====================================================================
+   Directory of Affiliated Chambers, Trade Sections & Associations
+==================================================================== */
+.associations-directory-section {
+    position: relative;
+    padding: 95px 0 100px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.directory-group-block {
+    position: relative;
+}
+
+.border-top-divider {
+    border-top: 2px dashed #e2e8f0;
+    margin-top: 60px;
+    padding-top: 60px;
+}
+
+.subgroup-header {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subgroup-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(16, 38, 64, 0.04);
+}
+
+.subgroup-title i {
+    color: #da2c46;
+    font-size: 16px;
+}
+
+.subgroup-title h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #102640;
+    margin: 0;
+}
+
+.directory-items-row {
+    margin-top: 20px;
+}
+
+.directory-item-col {
+    margin-bottom: 20px;
+}
+
+.directory-item-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 3px 10px rgba(16, 38, 64, 0.03);
+}
+
+.directory-item-card:hover {
+    transform: translateY(-4px);
+    border-color: #d9a74a;
+    box-shadow: 0 12px 28px rgba(16, 38, 64, 0.08);
+}
+
+.directory-item-card .item-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(16, 38, 64, 0.05);
+    color: #102640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.directory-item-card:hover .item-icon-box {
+    background: #da2c46;
+    color: #ffffff;
+    transform: rotate(6deg);
+}
+
+.directory-item-card .item-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    line-height: 1.45;
+    transition: color 0.3s ease;
+}
+
+.directory-item-card:hover .item-info h4 {
+    color: #102640;
+}
+
+.trade-section-card {
+    background: #ffffff;
+    border-left: 4px solid #da2c46;
+}
+
+.trade-section-card .item-icon-box {
+    background: rgba(218, 44, 70, 0.1);
+    color: #da2c46;
+}
