@@ -858,6 +858,43 @@
 
 	$(document).ready(function() {
 		initMilestoneTimeline();
+
+		// Membership Tier Details Toggle
+		$('.tier-expanded-details').on('show.bs.collapse', function () {
+			var btn = $(this).closest('.membership-tier-card').find('.view-more-btn');
+			btn.find('span').text('View Less');
+			btn.addClass('active-btn');
+			btn.find('i').removeClass('fa-chevron-right').addClass('fa-chevron-up');
+		}).on('hide.bs.collapse', function () {
+			var btn = $(this).closest('.membership-tier-card').find('.view-more-btn');
+			btn.find('span').text('View More');
+			btn.removeClass('active-btn');
+			btn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-right');
+		});
+
+		// Membership Specifications Tab Switching
+		$('.spec-tab-buttons .tab-btn').on('click', function (e) {
+			e.preventDefault();
+			var targetTab = $(this).attr('data-tab');
+			
+			$('.spec-tab-buttons .tab-btn').removeClass('active-tab');
+			$(this).addClass('active-tab');
+			
+			$('.spec-tabs-content .spec-tab-pane').removeClass('active-pane');
+			$(targetTab).addClass('active-pane');
+		});
+
+		// Smooth Jump Link to Specific Membership Tab
+		$('.spec-jump-link').on('click', function (e) {
+			e.preventDefault();
+			var targetTab = $(this).attr('data-target-tab');
+			if (targetTab) {
+				$('.spec-tab-buttons .tab-btn[data-tab="' + targetTab + '"]').trigger('click');
+				$('html, body').animate({
+					scrollTop: $('#membership-details').offset().top - 90
+				}, 700);
+			}
+		});
 	});
 
 	/* ==========================================================================
