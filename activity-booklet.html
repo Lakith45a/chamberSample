@@ -227,23 +227,6 @@
         </nav>
     </div><!-- End Mobile Menu -->
 
-
-    <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/images/background/aboutus_banner.webp);">
-        <div class="auto-container">
-            <div class="content-box clearfix">
-                <h1>Activity Booklet</h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index-2.html">Home</a></li>
-                    <li>Publications</li>
-                    <li>Activity Booklet</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
-
-
     <!-- Activity Booklet Custom Styles -->
     <style>
         :root {
@@ -964,8 +947,23 @@
     </style>
 
 
+    <!--Page Title-->
+    <section class="page-title centred" style="background-image: url(assets/images/background/booklet.webp);">
+        <div class="auto-container">
+            <div class="content-box clearfix">
+                <h1>Activity Booklet</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index-2.html">Home</a></li>
+                    <li>Publications</li>
+                    <li>Activity Booklet</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
 
-    <!-- SECTION 2: Interactive Booklet Archive Gallery -->
+
+    <!--Interactive Booklet Archive Gallery -->
     <section class="booklet-gallery-section">
         <div class="auto-container">
             
@@ -1325,81 +1323,6 @@
 
 
 
-
-   
-
-
-    <!-- Activity Booklet Interactive Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.booklet-filter-btn');
-            const searchInput = document.getElementById('bookletSearchInput');
-            const cardItems = document.querySelectorAll('.booklet-card-item');
-            const noResultsAlert = document.getElementById('noBookletsAlert');
-            const resetBtn = document.getElementById('btnResetFilters');
-
-            let currentCategory = 'all';
-            let searchQuery = '';
-
-            function updateDisplay() {
-                let visibleCount = 0;
-
-                cardItems.forEach(function(card) {
-                    const cardCategory = card.getAttribute('data-category') || '';
-                    const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
-                    const cardText = card.textContent.toLowerCase();
-
-                    const matchesCategory = (currentCategory === 'all') || cardCategory.includes(currentCategory);
-                    const matchesSearch = !searchQuery || cardTitle.includes(searchQuery) || cardText.includes(searchQuery);
-
-                    if (matchesCategory && matchesSearch) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                if (visibleCount === 0) {
-                    noResultsAlert.style.display = 'block';
-                } else {
-                    noResultsAlert.style.display = 'none';
-                }
-            }
-
-            // Filter button click handler
-            filterBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
-                    this.classList.add('active');
-                    currentCategory = this.getAttribute('data-filter');
-                    updateDisplay();
-                });
-            });
-
-            // Live Search input handler
-            if (searchInput) {
-                searchInput.addEventListener('input', function() {
-                    searchQuery = this.value.trim().toLowerCase();
-                    updateDisplay();
-                });
-            }
-
-            // Reset filters handler
-            if (resetBtn) {
-                resetBtn.addEventListener('click', function() {
-                    currentCategory = 'all';
-                    searchQuery = '';
-                    if (searchInput) searchInput.value = '';
-                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
-                    if (filterBtns[0]) filterBtns[0].classList.add('active');
-                    updateDisplay();
-                });
-            }
-        });
-    </script>
-
-
     <!-- main-footer -->
     <footer class="main-footer alternet-2">
         <div class="footer-top">
@@ -1584,6 +1507,76 @@
 
 <!-- main-js -->
 <script src="assets/js/script.js"></script>
+
+<!-- Activity Booklet Interactive Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.booklet-filter-btn');
+            const searchInput = document.getElementById('bookletSearchInput');
+            const cardItems = document.querySelectorAll('.booklet-card-item');
+            const noResultsAlert = document.getElementById('noBookletsAlert');
+            const resetBtn = document.getElementById('btnResetFilters');
+
+            let currentCategory = 'all';
+            let searchQuery = '';
+
+            function updateDisplay() {
+                let visibleCount = 0;
+
+                cardItems.forEach(function(card) {
+                    const cardCategory = card.getAttribute('data-category') || '';
+                    const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
+                    const cardText = card.textContent.toLowerCase();
+
+                    const matchesCategory = (currentCategory === 'all') || cardCategory.includes(currentCategory);
+                    const matchesSearch = !searchQuery || cardTitle.includes(searchQuery) || cardText.includes(searchQuery);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResultsAlert.style.display = 'block';
+                } else {
+                    noResultsAlert.style.display = 'none';
+                }
+            }
+
+            // Filter button click handler
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    this.classList.add('active');
+                    currentCategory = this.getAttribute('data-filter');
+                    updateDisplay();
+                });
+            });
+
+            // Live Search input handler
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    searchQuery = this.value.trim().toLowerCase();
+                    updateDisplay();
+                });
+            }
+
+            // Reset filters handler
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function() {
+                    currentCategory = 'all';
+                    searchQuery = '';
+                    if (searchInput) searchInput.value = '';
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    if (filterBtns[0]) filterBtns[0].classList.add('active');
+                    updateDisplay();
+                });
+            }
+        });
+    </script>
 
 </body><!-- End of .page_wrapper -->
 
