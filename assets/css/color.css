@@ -39,16 +39,18 @@
 	background: #da2c46;
 }
 
-.main-menu .navigation > li > ul > li > a:hover{
-  color: #da2c46;
+.main-menu .navigation > li > ul > li > a:hover,
+.main-menu .navigation > li > ul > li.current > a{
+  color: #063c83;
 }
 
-.main-menu .navigation > li > ul > li > ul > li > a:hover{
-  color: #da2c46;
+.main-menu .navigation > li > ul > li > ul > li > a:hover,
+.main-menu .navigation > li > ul > li > ul > li.current > a{
+  color: #063c83;
 }
 
 .main-menu .navigation li.dropdown .megamenu li a:hover{
-	color: #da2c46;
+	color: #063c83;
 }
 
 .side-menu .navigation li.current{
@@ -86,7 +88,7 @@
 
 .sticky-header .main-menu .navigation > li.current > a,
 .sticky-header .main-menu .navigation > li:hover > a{
-  color: #da2c46;
+  color: #063c83;
 }
 
 .info-section .title-inner .title h2 span{
@@ -268,20 +270,22 @@
   color: #f8952c !important;
 }
 
-.main-header.style-two .main-menu .navigation > li > ul > li > a:hover {
-  color: #f8952c;
+.main-header.style-two .main-menu .navigation > li > ul > li > a:hover,
+.main-header.style-two .main-menu .navigation > li > ul > li.current > a {
+  color: #063c83;
 }
 
-.main-header.style-two .main-menu .navigation > li > ul > li > ul > li > a:hover {
-    color: #f8952c;
+.main-header.style-two .main-menu .navigation > li > ul > li > ul > li > a:hover,
+.main-header.style-two .main-menu .navigation > li > ul > li > ul > li.current > a {
+    color: #063c83;
 }
 
 .main-header.style-two .main-menu .navigation li.dropdown .megamenu li a:hover {
-    color: #f8952c;
+    color: #063c83;
 }
 
 .main-header.style-two .header-lower .menu-right-content .search-btn button:hover{
-	color: #f8952c;
+	color: #063c83;
 }
 
 .banner-section.style-two .content-box .btn-box .user-btn-two:hover{

@@ -5387,19 +5387,22 @@ h4 a{
 
 .main-header.style-two .sticky-header .main-menu .navigation > li.current > a,
 .main-header.style-two .sticky-header .main-menu .navigation > li:hover > a{
-  
+  color: #063c83 !important;
 }
 
-.main-header.style-two .main-menu .navigation > li > ul > li > a:hover {
-  
+.main-header.style-two .main-menu .navigation > li > ul > li > a:hover,
+.main-header.style-two .main-menu .navigation > li > ul > li.current > a {
+  color: #063c83 !important;
 }
 
-.main-header.style-two .main-menu .navigation > li > ul > li > ul > li > a:hover {
-  
+.main-header.style-two .main-menu .navigation > li > ul > li > ul > li > a:hover,
+.main-header.style-two .main-menu .navigation > li > ul > li > ul > li.current > a {
+  color: #063c83 !important;
 }
 
-.main-header.style-two .main-menu .navigation li.dropdown .megamenu li a:hover {
-    
+.main-header.style-two .main-menu .navigation li.dropdown .megamenu li a:hover,
+.main-header.style-two .main-menu .navigation li.dropdown .megamenu li.current a {
+  color: #063c83 !important;
 }
 
 .main-header.style-two .header-lower .menu-right-content .search-btn,
